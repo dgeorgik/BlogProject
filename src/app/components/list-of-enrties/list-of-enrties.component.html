@@ -1,0 +1,11 @@
+<div *ngFor="let element of arrayToBlogRows">
+  <div *ngIf="element.arhiveFlag == 'inPublich'">
+
+  <h1><b>{{element.title}}</b></h1>
+<p> Категория: <b> {{element.category}}</b></p>
+<p>Автор: <b>{{element.autor}}</b></p>
+<p>{{element.comments}}</p>
+<input class="styled_del" style=" background-color:  #cf3a15;" type="button"  (click)="styled_del(element.id)"   value="Удалить"/>
+<input class="styled_arch"  style=" background-color:  #A3AE9E;" type="button"  (click)="styled_arch(element.id)"  value="Архив"/>
+  </div>
+</div>

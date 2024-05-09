@@ -1,0 +1,19 @@
+
+<form name="blogForm" id="blogForm">
+  <h3>Автор</h3>
+  <input type="text" size="40" id="autorsName" name="autorsName" [(ngModel)]="autorsName" >
+  <h3>Заголовок</h3>
+  <input type="text" size="40" id="titelName" name="titelName" [(ngModel)]="titelName" >
+  <h3>Категория</h3>
+  <input type="text" size="40" id="category" name="category" [(ngModel)]="category" >
+  <h3>Содержание</h3>
+  <textarea id="commentName" name="commentName" cols="40" rows="3" [(ngModel)]="commentName" >
+        </textarea>
+  <p style="color: red" id="elements_to_error"> {{errorEx}}</p>
+
+  <p><input class="styled" type="button" (click)="functionToAddNewBlogRow()" value="Создать"/></p>
+</form>
+<h1>Архив</h1>
+<hr>
+<!--Тут ссылка на архив-->
+<app-list-of-archive></app-list-of-archive>
